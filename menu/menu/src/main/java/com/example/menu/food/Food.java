@@ -24,20 +24,4 @@ public class Food {
         this.price = data.price();
         this.title = data.title();
     }
-
-    public Long getId() {
-        return id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public String getImage() {
-        return image;
-    }
-
-    public Integer getPrice() {
-        return price;
-    }
 }
