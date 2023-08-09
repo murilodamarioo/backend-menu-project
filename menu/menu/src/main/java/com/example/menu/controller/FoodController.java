@@ -14,6 +14,7 @@ import java.util.List;
 public class FoodController {
     @Autowired
     private FoodRepository foodRepository;
+
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping
     public void saveFood(@RequestBody FoodRequestDTO data) {
@@ -21,6 +22,7 @@ public class FoodController {
         foodRepository.save(foodData);
         return;
     }
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping
     public List<FoodResponseDTO> getAllFoods() {
         return foodRepository.findAll().stream().map(FoodResponseDTO::new).toList();
